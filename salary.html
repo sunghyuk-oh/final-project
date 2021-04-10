@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Programming Language Newbies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <!--Bootstrap JS-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Customized fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Pangolin&display=swap" rel="stylesheet">
+
+  <script>
+    $(document).ready(() => {
+      $("#includedContent").load("login.html");
+    });
+  </script>
+
+  <style>
+    body {
+      font: 400 15px 'Montserrat', sans-serif;
+      height: 100%;
+    }
+
+    .navbar {
+      background-color: #fff;
+    }
+
+    #navbarContents {
+      padding: 5px 30px;
+    }
+
+    .nav-item {
+      padding-left: 10px;
+    }
+
+    .btn-group {
+      margin-right: 0.5rem;
+    }
+
+    .login-form {
+      width: 400px;
+      margin: 15px 0px;
+      padding: 20px;
+    }
+
+    header {
+      background-image: url("img/header.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      padding: 110px;
+    }
+
+    header h1 {
+      color: #2a83e3;
+    }
+
+    .container {
+      background-color: #fff;
+    }
+
+    .row {
+      background-color: #fff;
+    }
+
+    .col {
+      display: flex;
+      justify-content: space-around;
+      padding: 80px 0px 80px 0px;
+      border-radius: 50%;
+    }
+
+    .card {
+      max-width: auto;
+    }
+
+    .card-img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100px;
+      height: 100px;
+      border-radius: 30%;
+    }
+
+    .btn {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      background-color: #8eb4ed;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+  </style>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['bar'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Programming Language', 'US in Dollar'],
+        ['Kotlin', 137000],
+        ['TypeScript', 125000],
+        ['Objective C', 123000],
+        ['Go', 111000],
+        ['Python', 110000],
+        ['JAVA', 103000],
+        ['Swift', 103000],
+        ['jQuery', 98000],
+        ['Unity', 98000],
+        ['JavaScript', 93000],
+        ['HTML/CSS', 88000],
+        ['PHP', 86000],
+        ['C++', 80000],
+        ['Ruby', 77000],
+        ['C#', 69000],
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Average salary for programming languages in the US',
+        },
+        bars: 'horizontal'
+      };
+
+      var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-md navbar-light sticky-top">
+    <a class="navbar-brand mb-0 h1" style="color: #1c75d4">
+      <img src="img/logo.png" width="30" height="30" alt="Logo">
+      <strong>PLN</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContents"
+      aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContents">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html" style="color: #66b3ff;">Home</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="color: #66b3ff;">
+            Web Development
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="web_front-end.html" style="color: #66b3ff;">Front-end</a>
+            <a class="dropdown-item" href="web_back-end.html" style="color: #66b3ff;">Back-end</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="game.html" style="color: #66b3ff;">Game Development</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="mobile.html" style="color: #66b3ff;">Mobile Development</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="salary.html" style="color: #66b3ff;">Average Salary</a>
+        </li>
+      </ul>
+
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <a class="btn btn-outline-warning btn-sm btn-space sign-up" href="sign-up.html">Sign Up</a>
+        </div>
+        <div id="includedContent"></div>
+
+      </div> <!-- btn-toolbar -->
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Average Salary</h1>
+  </header>
+
+  <!-- Container -->
+  <div class="container">
+    <!-- Main Contents -->
+    <div class="row">
+      <div class="col">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+          </div> <!-- card body -->
+        </div> <!-- card -->
+      </div> <!-- cols -->
+    </div> <!-- row -->
+  </div> <!-- container -->
+
+  <!-- Footer -->
+  <footer>
+    <p>Disclaimer: This is a fictitious organization. This website was created for a school project. Certain materials
+      are included under the fair use exemption of the U.S. Copyright Law and have been prepared according to the
+      multimedia fair use guidelines and are restricted from further use.</p>
+  </footer>
+
+  <!-- JavaScript & jQuery -->
+  <script>
+    $(document).ready(() => {
+      $('.log-in').on('click', () => {
+        $('#warning').hide();
+      });
+    });
+  </script>
+</body>
+
+</html>

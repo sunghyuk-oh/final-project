@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="jquery.js"></script>
+
+    <title>Programming Language Newbies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <!--Bootstrap JS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Customized fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Pangolin&display=swap" rel="stylesheet">
+
+    <script>
+        $(document).ready(() => {
+            $("#includedContent").load("login.html");
+        });
+    </script>
+    <style>
+        body {
+            font: 400 15px 'Montserrat', sans-serif;
+            height: 100%;
+        }
+
+        .navbar {
+            background-color: #fff;
+        }
+
+        #navbarContents {
+            padding: 5px 30px;
+        }
+
+        .nav-item {
+            padding-left: 10px;
+        }
+
+        .btn-group {
+            margin-right: 0.5rem;
+        }
+
+        .login-form {
+            width: 400px;
+            margin: 15px 0px;
+            padding: 20px;
+        }
+
+        header {
+            background-image: url("img/header.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 110px;
+        }
+
+        header h1 {
+            color: #2a83e3;
+        }
+
+        .container {
+            background-color: #fff;
+        }
+
+        .container h4 {
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        .description {
+            padding: 150px 300px;
+        }
+
+        .description p {
+            font-size: 18px;
+        }
+
+        .row {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .col {
+            padding: 10px 30px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .card {
+            max-width: 25rem;
+        }
+
+        .image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            height: 60%;
+            padding-bottom: 150px;
+        }
+
+        .btn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            background-color: #8eb4ed;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-md navbar-light sticky-top">
+        <a class="navbar-brand mb-0 h1" style="color: #1c75d4">
+            <img src="img/logo.png" width="30" height="30" alt="Logo">
+            <strong>PLN</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContents"
+            aria-controls="navbarContents" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContents">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" style="color: #66b3ff;">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #66b3ff;">
+                        Web Development
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="web_front-end.html" style="color: #66b3ff;">Front-end</a>
+                        <a class="dropdown-item" href="web_back-end.html" style="color: #66b3ff;">Back-end</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="game.html" style="color: #66b3ff;">Game Development</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="mobile.html" style="color: #66b3ff;">Mobile Development</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="salary.html" style="color: #66b3ff;">Average Salary</a>
+                </li>
+            </ul>
+
+            <div class="btn-toolbar">
+                <div class="btn-group">
+                    <a class="btn btn-outline-warning btn-sm btn-space sign-up" href="sign-up.html">Sign Up</a>
+                </div>
+                <div id="includedContent"></div>
+
+            </div> <!-- btn-toolbar -->
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Programming Language Newbies</h1>
+    </header>
+
+    <!-- Container -->
+    <div class="container col-md-12 ml-auto mr-auto">
+
+        <!-- Main Contents -->
+
+        <div class="description">
+            <h4><strong>About Us</strong></h4><br><br>
+            <p><strong>Programming Language Newbie</strong> introduces the programming languages to the beginner. It
+                lists out the different types of widely used languages, explains what it is and its purpose. The purpose
+                of the website is to navigate the users to choose the right language for the first time learning.</p>
+        </div>
+
+        <div class="row">
+            <div class="col col-lg-2 col-md-6 col-sm-12 mb-4">
+                <div class="card shadow-lg">
+                    <img class="card-img-top" src="img/main1.png"><br>
+                    <div class="card-body">
+                        <p class="card-text text-center">You learn how to break down a problem into individual steps and
+                            to use a language that the computer understands to logically create a working program.</p>
+                    </div> <!-- card body -->
+                </div> <!-- card -->
+            </div> <!-- cols -->
+
+            <div class="col col-lg-2 col-md-6 col-sm-12 mb-4">
+                <div class="card shadow-lg">
+                    <img class="card-img-top" src="img/main2.png"><br>
+                    <div class="card-body">
+                        <p class="card-text text-center">You can learn in a gamified environment that is mission-based,
+                            engaging, fun and that only needs a computer with the internet to work.</p>
+                    </div> <!-- card body -->
+                </div> <!-- card -->
+            </div> <!-- cols -->
+
+            <div class="col col-lg-2 col-md-6 col-sm-12 mb-4">
+                <div class="card shadow-lg">
+                    <img class="card-img-top" src="img/main3.png"><br>
+                    <div class="card-body">
+                        <p class="card-text text-center">You develop a certain mindset on approaching problems and
+                            processing large amounts of information that is necessary with conquering any new topic.</p>
+                    </div> <!-- card body -->
+                </div> <!-- card -->
+            </div> <!-- cols -->
+        </div> <!-- row -->
+        <div class="description">
+            <p>Programming languages are one of essential trends impacting the operations of the Information Technology
+                (IT) industry since IT has resulted in developing one of the world’s largest industries. For that
+                reason, people enter into the IT field or change their career from another sector, and they are willing
+                to learn about one of the programming languages. However, many of them have trouble finding a good
+                language to learn first because there are so many and which language is used for which purpose.</p><br>
+        </div>
+
+        <img class="image" src="img/main4.jpg"><br>
+    </div> <!-- container -->
+
+    <!-- Footer -->
+    <footer>
+        <p>Disclaimer: This is a fictitious organization. This website was created for a school project. Certain
+            materials are included under the fair use exemption of the U.S. Copyright Law and have been prepared
+            according to the multimedia fair use guidelines and are restricted from further use.</p>
+    </footer>
+
+    <!-- JavaScript & jQuery -->
+
+</body>
+
+</html>

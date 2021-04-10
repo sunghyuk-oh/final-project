@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <!-- Login -->
+
+    <script>
+
+    </script>
+
+    <div class="btn-group">
+
+        <button class="btn btn-outline-success btn-sm btn-space dropdown-toggle log-in" data-toggle="dropdown">Log
+            In</button>
+        <div class='dropdown-menu dropdown-menu-right border border-success rounded login-form'>
+            <form>
+                <small id="warning" class="form-text text-danger">You must log in first in order to take a
+                    course</small><br>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" type="text" placeholder="Email Address"
+                        value="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" type="text" placeholder="Password"
+                        value="">
+                </div>
+                <button type="submit" class="btn btn-sm btn-success">Log In</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="welcome-user">
+        <p></p>
+        <button class="btn btn-outline-success  logout-button">Log Out</button>
+    </div>
+    </div>
+
+    <!-- Header -->
+
+
+    <!-- JavaScript & jQuery -->
+    <script>
+        $(document).ready(() => {
+
+            $('.log-in').on('click', () => {
+                $('#warning').hide();
+            });
+
+            $('.btn.btn-success').on('click', (e) => {
+                // e.preventDefault()
+                let id = $('#email').val();
+                let pw = $('#password').val()
+                console.log(id, pw);
+                loginUser(id, pw);
+
+            });
+
+            $('.logout-button').on('click', (e) => {
+                logout()
+
+            });
+
+
+
+            const user = localStorage.getItem('user');
+            if (user) {
+                $('.btn-group').css('display', 'none');
+                $('.welcome-user p').text(`welcome ${user}`);
+            } else {
+                $('.welcome-user').css('display', 'none');
+            }
+        });
+
+
+
+        function loginUser(email, password) {
+            console.log('request is hit');
+            console.log(email, password);
+            $.post({
+                url: "http://localhost:4000/users/login",
+                data: { email, password },
+            })
+                .fail((e) => {
+                    console.log(e);
+                    console.log('hit here on error');
+                    alert(e.responseText)
+                })
+                .done(async (res) => {
+                    console.log(res);
+                    await localStorage.setItem("user", res.first_name)
+                    // document.location.reload(true)
+                    return res;
+                })
+
+        }
+
+
+
+        function logout() {
+            localStorage.clear('user')
+            document.location.reload(true)
+        }
+
+        func
+    </script>
+</body>
+
+</html>
