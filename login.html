@@ -4,10 +4,6 @@
 <body>
     <!-- Login -->
 
-    <script>
-
-    </script>
-
     <div class="btn-group">
 
         <button class="btn btn-outline-success btn-sm btn-space dropdown-toggle log-in" data-toggle="dropdown">Log
@@ -32,7 +28,7 @@
 
     <div class="welcome-user">
         <p></p>
-        <button class="btn btn-outline-success  logout-button">Log Out</button>
+        <button class="btn btn-outline-success logout-button">Log Out</button>
     </div>
     </div>
 
@@ -78,7 +74,7 @@
             console.log('request is hit');
             console.log(email, password);
             $.post({
-                url: "http://localhost:4000/users/login",
+                url: "https://sung-personal.herokuapp.com/users/login",
                 data: { email, password },
             })
                 .fail((e) => {
@@ -95,14 +91,10 @@
 
         }
 
-
-
         function logout() {
             localStorage.clear('user')
             document.location.reload(true)
         }
-
-        func
     </script>
 </body>
 
