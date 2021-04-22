@@ -22,6 +22,15 @@ router.post('/login', function (req, res, next) {
   // throw new Error("user not found").message("user not found")
 });
 
+
+router.get('/data', function (req, res, next) {
+  var user_data = require('../database/user.json')
+
+  res.status(200).send(user_data);
+
+});
+
+
 router.post('/register', function (req, res, next) {
   const { first_name, last_name, email, password } = req.body;
   var user_data = require('../database/user.json')
