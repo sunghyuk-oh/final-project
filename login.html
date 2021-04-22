@@ -25,14 +25,16 @@
         </div>
     </div>
 
-
     <div class="welcome-user">
-        <p></p>
-        <button class="btn btn-outline-success logout-button">Log Out</button>
-    </div>
-    </div>
+        <!-- ********************** -->
+        <button class="btn btn-outline-info btn-sm btn-space dropdown-toggle logged-in" data-toggle="dropdown"></button>
+        <div class='dropdown-menu dropdown-menu-right border border-info rounded' style="margin-right:40px;">
 
-    <!-- Header -->
+            <button class="btn btn-outline-danger btn-sm logout-button">Log Out</button>
+
+        </div>
+        <!-- ********************** -->
+    </div>
 
 
     <!-- JavaScript & jQuery -->
@@ -57,17 +59,15 @@
 
             });
 
-
-
             const user = localStorage.getItem('user');
             if (user) {
                 $('.btn-group').css('display', 'none');
-                $('.welcome-user p').text(`welcome ${user}`);
+                // **********************
+                $('.welcome-user .logged-in').text(`Welcome ${user}`);
             } else {
                 $('.welcome-user').css('display', 'none');
             }
         });
-
 
 
         function loginUser(email, password) {
