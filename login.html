@@ -28,10 +28,10 @@
     <div class="welcome-user">
         <!-- ********************** -->
         <button class="btn btn-outline-info btn-sm btn-space dropdown-toggle logged-in" data-toggle="dropdown"></button>
-        <div class='dropdown-menu dropdown-menu-right border border-info rounded' style="margin-right:40px;">
-
+        <div class='dropdown-menu dropdown-menu-right border rounded' style="margin-right:40px;">
+            <button class="btn btn-outline-primary btn-sm profile-button" style="margin-bottom:15px;">View
+                Profile</button>
             <button class="btn btn-outline-danger btn-sm logout-button">Log Out</button>
-
         </div>
         <!-- ********************** -->
     </div>
@@ -85,7 +85,7 @@
                 .done(async (res) => {
                     console.log(res);
                     await localStorage.setItem("user", res.first_name)
-                    // document.location.reload(true)
+                    document.location.reload(true)
                     return res;
                 })
 

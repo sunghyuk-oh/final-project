@@ -271,9 +271,18 @@
             });
 
             $('.course-button').on('click', () => {
-                $('.login-form').toggle();
+                directUser();
             });
         });
+        function directUser() {
+            const user = localStorage.getItem("user");
+            if (user) {
+                $(location).attr('href', 'payment.html');
+            }
+            else {
+                $('.login-form').toggle();
+            }
+        }
     </script>
 </body>
 
